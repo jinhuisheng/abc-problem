@@ -4,13 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AbcProblemTest {
     @Test
     void should_test_make_one_length_word() {
-        HashMap<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("A"));
+        Map<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("A"));
 
         HashMap<String, Boolean> expected = new HashMap<>();
         expected.put("A", true);
@@ -19,7 +20,7 @@ public class AbcProblemTest {
 
     @Test
     void should_test_make_one_length_word_with_lowercase() {
-        HashMap<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("a"));
+        Map<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("a"));
 
         HashMap<String, Boolean> expected = new HashMap<>();
         expected.put("a", true);
@@ -28,7 +29,7 @@ public class AbcProblemTest {
 
     @Test
     void should_test_make_one_word_with_two_length() {
-        HashMap<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("AB"));
+        Map<String, Boolean> result = AbcProblem.makeWords(Arrays.asList("AB"));
 
         HashMap<String, Boolean> expected = new HashMap<>();
         expected.put("AB", true);
@@ -37,7 +38,7 @@ public class AbcProblemTest {
 
     @Test
     void should_test_make_multiple_words() {
-        HashMap<String, Boolean> result = AbcProblem.makeWords(Arrays.asList(
+        Map<String, Boolean> result = AbcProblem.makeWords(Arrays.asList(
                 "A",
                 "BARK",
                 "BOOK",
